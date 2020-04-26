@@ -1,16 +1,16 @@
  import React from 'react'
 import {Card,CardContent, Typography,Grid} from '@material-ui/core'
 import Countup from 'react-countup'
-import './Cards.module.css'
+import './Cards.css'
 const Cards = (props) => {
-    console.log(props)
+    console.log("abc",props)
     if(!props.data.confirmed){
         return "Loading....."
     }
     return(
-        <div className=".container">
+        <div className="container">
             <Grid container spacing={3} justify="centre">
-                <Grid item component={Card} xs={12} md={3} classNames=".card .infected">
+                <Grid  item component={Card} xs={12} md={3} className="card infected">
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Confirmed</Typography>
                         <Typography variant='h5'>
@@ -26,7 +26,7 @@ const Cards = (props) => {
                         <Typography variant="body2">Number of active cases of covid 19</Typography>
                     </CardContent>
                 </Grid>
-                <Grid item component={Card}xs={12} md={3} classNames=".card .infected">
+                <Grid item component={Card}xs={12} md={3} className="card deaths">
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Deaths</Typography>
                         <Typography variant='h5'>
@@ -42,7 +42,7 @@ const Cards = (props) => {
                         <Typography variant="body2">Number of recoveries of covid 19</Typography>
                     </CardContent>
                 </Grid>
-                <Grid item component={Card} xs={12} md={3} classNames=".card .infected">
+                <Grid item component={Card} xs={12} md={3} className="card recovered">
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Recovered</Typography>
                         <Typography variant='h5'>
