@@ -26,9 +26,9 @@ class App extends React.Component{
     render(){
         return(
             <div className="container">
-                <h1>Covid 19 Record for India</h1>
-                {this.state.data ? <Cards data={this.state.data}/> : null}
+                <h1>Covid 19 cases in India</h1>
                 <StatePicker />
+                {this.state.data ? <Cards data={this.state.data}/> : null}
                 <Chart />
             </div>
         )
